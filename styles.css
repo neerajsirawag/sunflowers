@@ -1,0 +1,80 @@
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* width: 100vw; */
+        margin: 0;
+        background-image: url('https://images.unsplash.com/photo-1675268186872-f1e01d401d5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+    }
+    
+    #garden {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .sunflower {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-image: url('src/pngwing.com.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(0.5);
+        animation: growSunflower 1s forwards;
+    }
+    
+    .sunflower-image {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #centerSunflower {
+        top: 40%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        animation-delay: 0s;
+    }
+    
+    .sunflower.petal {
+        /* background-color: #fdd835; */
+        width: 100px;
+        height: 100px;
+        background-image: url('src/pngwing.com.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: none;
+    }
+    
+    @keyframes growSunflower {
+        to {
+            opacity: 1;
+            transform: scale(2.7);
+        }
+    }
+    
+    #backgroundLeaves {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://www.transparenttextures.com/patterns/green-leaves.png');
+        background-size: cover;
+        opacity: 0;
+        animation: showLeaves 5s forwards 3s;
+    }
+    
+    @keyframes showLeaves {
+        to {
+            opacity: 1;
+        }
+    }
